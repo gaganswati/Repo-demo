@@ -1,13 +1,12 @@
 name: Docker Image CI
-'on':
-  push:
-    branches:
-      - master
+
+on: push
 jobs:
-  build:
+  push_to_registry:
+    name: push docker image to docker hub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@gaganswati
+      - uses: actions/checkout@v3
       - name: Build the Docker image
         run: >
           echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{
