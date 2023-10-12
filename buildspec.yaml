@@ -10,9 +10,6 @@ phases:
     commands:
       - echo build started on 'date'
       - cp index.html var/www/html/
-  postbuild:
-    commands:
-      - echo configuring Nginx
       
 artifacts:
   files:
