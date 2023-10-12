@@ -1,3 +1,4 @@
+---
 version: 0.2
 phases:
   install:
@@ -6,13 +7,12 @@ phases:
       - sudo apt-get update
       - sudo apt-get install nginx-y
   build:
-    commands:  
+    commands:
       - echo build started on 'date'
       - cp index.html var/www/html/
   postbuild:
-    commands:  
+    commands:
       - echo configuring Nginx
   artifacts:
-     files:
+    files:
       - var/www/html/index.html
-        
