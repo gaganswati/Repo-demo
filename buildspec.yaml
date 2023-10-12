@@ -13,6 +13,7 @@ phases:
   postbuild:
     commands:
       - echo configuring Nginx
+      
 artifacts:
   files:
     - var/www/html/index.html
